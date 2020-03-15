@@ -1,0 +1,509 @@
+/*
+ Theme Name:   html5-blank-slate-master-child
+ Theme URI:    http://
+ Description:  html5-blank-slate-master-child
+ Author:       James Toon
+ Author URI:   http://www.propagatus.com
+ Template:     html5-blank-slate-master
+ Version:      1.0.0
+ License:      
+ License URI:  
+ Tags:         
+ Text Domain:  html5-blank-slate-master-child
+*/
+
+/*Element Styles*/
+* {
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+a {
+    color: #333;
+    font-size: 1.0rem;
+}
+a:hover {
+    color: #0352e3;
+}
+p {
+    font-size: 1.0rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 1.6rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+h5 {
+    font-size: 1.6rem;
+}
+h6 {
+    font-size: 1.4rem;
+}
+
+/*Common Styles*/
+.clearfix::after {
+    content: " ";
+    display: block; 
+    height: 0; 
+    clear: both;
+}
+.flex_box_main, 
+.flex_box_preview,
+.flex_box_footer {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex_item_content {
+    flex: 1;
+}
+.flex_item_sidebar {
+    flex: 0 0 240px;
+}
+.flex_item_img_preview {
+    flex: 0 0 150px;
+}
+.flex_item_text_preview {
+    flex: 1;
+}
+.flex_item_footer {
+    flex: 1;
+}
+
+/*Toggled Styles*/
+.show_nav {
+    display: block !important;
+}
+
+/*Crazimation Styles*/
+.letter {
+    display: inline-block;
+    animation: wave 5s linear infinite;
+}
+#letter_1 {
+    animation-delay: 1s;
+}
+#letter_2 {
+    animation-delay: 1.5s;
+}
+#letter_3 {
+    animation-delay: 2s;
+}
+#letter_4 {
+    animation-delay: 2.5s;
+}
+#letter_5 {
+    animation-delay: 3s;
+}
+#letter_6 {
+    animation-delay: 3.5s;
+}
+#letter_7 {
+    animation-delay: 4s;
+}
+#letter_8 {
+    animation-delay: 4.5s;
+}
+#letter_9 {
+    animation-delay: 5s;
+}
+#letter_10 {
+    animation-delay: 5.5s;
+}
+#letter_11 {
+    animation-delay: 6s;
+}
+#letter_12 {
+    animation-delay: 6.5s;
+}
+#letter_13 {
+    animation-delay: 7s;
+}
+@keyframes wave {
+    0% {transform: translateY(0px) rotate(0deg);}
+    1.82% {transform: translateY(-2px) rotate(-7deg);}
+    3.74% {transform: translateY(-10px) rotate(-15deg);}
+    11.18% {transform: translateY(-18px) rotate(-7deg);}
+    13% {transform: translateY(-20px) rotate(0deg);}
+    15.08% {transform: translateY(-18px) rotate(2deg);}
+    19.5% {transform: translateY(-10px) rotate(15deg);}
+    24.18% {transform: translateY(-2px) rotate(2deg);}
+    26% {transform: translateY(0px) rotate(0deg);}
+    100% {transform: translateY(0px) rotate(0deg);}
+}
+@keyframes swim {
+    0% {background-position: -40% 0px;}
+    100% {background-position: 140% 0px;}
+}
+
+/*Main Navigation Styles*/
+.nav-main-wrap {
+    background-color: #e1e1e1;
+}
+.nav-main {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+.nav-main li {
+    background-color: #e1e1e1;
+    background-repeat: no-repeat;
+    background-position: -40% 0px;
+    background-size: contain;
+    display: inline-block;
+    list-style: none;
+    width: 180px;
+    text-align: center;
+}
+.nav-main li:hover {
+    animation: swim 2s linear infinite;
+}
+.nav-main li:first-child:hover, .nav-mobile li:first-child:hover {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/side_sea_fish.png');
+}
+.nav-main li:nth-child(2):hover, .nav-mobile li:nth-child(2):hover {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/side_sea_crayfish.png');
+}
+.nav-main li:nth-child(3):hover, .nav-mobile li:nth-child(3):hover {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/side_sea_seahorse.png');
+}
+.nav-main li:nth-child(4):hover, .nav-mobile li:nth-child(4):hover {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/side_sea_shark.png');
+}
+.nav-main li:nth-child(5):hover, .nav-mobile li:nth-child(5):hover {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/side_sea_starfish.png');
+}
+
+/*just playing with suedo classes but didn't like how it turned out*/
+.nav-main li:first-child {
+/*   border-left: 1px solid rgba(15, 15, 15, 0.1);*/
+}
+.nav-main li:last-child {
+/*   border-right: 1px solid rgba(15, 15, 15, 0.1);*/
+}
+.nav-main li:not(:first-child):not(:last-child) {
+/*
+    border-left: 1px solid rgba(15, 15, 15, 0.1);
+    border-right: 1px solid rgba(15, 15, 15, 0.1);
+*/
+}
+
+.nav-main li a {
+    display: block;
+    text-decoration: none;
+    padding: 16px 24px;
+}
+
+/*Mobile Navigation Styles*/
+.nav-mobile-wrap {
+    background-color: #e1e1e1;
+}
+#nav-mobile-toggle {
+    position: relative;
+    font-size: 1.8rem;
+    left: calc(100% - 75px);
+    margin: 10px 25px;
+}
+#nav-mobile-toggle:hover {
+    cursor: pointer;
+}
+.nav-mobile {
+    display: none;
+    margin: 0;
+    list-style: none;
+    padding-bottom: 25px;
+}
+.nav-mobile li {
+    margin: 0px auto;
+    padding: 12px 0px;
+    text-align: center;
+    background-color: #e1e1e1;
+    background-repeat: no-repeat;
+    background-position: -40% 0px;
+    background-size: contain;
+    border-bottom: 1px solid #0352e3;
+    width: 40%;
+}
+.nav-mobile li:hover {
+    animation: swim 2s linear infinite;
+}
+.nav-mobile li a {
+    text-decoration: none;
+    color: #333;
+}
+.nav-mobile li a:hover {
+    color: #0352e3;
+}
+
+
+/*Second Navigation Styles*/
+.nav-sub {
+    border: 1px solid #333;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+.nav-sub li {
+    display: inline-block;
+    list-style: none;
+}
+.nav-sub li:last-child {
+    float: right;
+}
+.nav-sub li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px;
+}
+.nav-sub li a:hover {
+    color: #e1e1e1;
+}
+
+
+/*Header Styles*/
+.jumbotron {
+    background-image: url('http://localhost/side_sea/wp-content/uploads/2020/03/under_sea.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.tron_text_wrap {
+    height: 100%;
+}
+.tron_text_container {
+    position: relative;
+    height: 100%;
+}
+.tron_text_container p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.tron_text_container p a {
+    text-decoration: none;
+    font-size: 4.4rem;
+    font-weight: bold;
+    color: white;
+}
+
+/*Index with Posts Styles*/
+.home_content {
+    margin: 65px auto 65px auto;
+
+    max-width: 1170px;
+}
+.post_page_header {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(15, 15, 15, 0.1);
+}
+.index-content {
+
+}
+
+/***Sidebars***/
+/*Main Sidebar*/
+.sidebar {
+    float: right;
+    padding: 0px 12px 24px 12px;
+    border-left: 1px solid rgba(15, 15, 15, 0.1);
+    margin-top: 26px;
+}
+.search-form label span {
+    display: block;
+    color: transparent;
+    line-height: 0px;
+    padding: 0px 0px 7px 0px;
+}
+.search-form .search-field {
+    padding: 7px 2px;
+    width: 100%;
+}
+.search-form .search-field:focus {
+    border-color: #0352e3;
+}
+.search-form .search-submit {
+    width: 100%;
+    margin-top: 12px;
+    padding: 7px 0px;
+}
+.search-form .search-submit:hover {
+    cursor: pointer;
+}
+.sidebar h4 {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0352e3;
+}
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar ul li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #0352e3;
+}
+.sidebar ul li a {
+    text-decoration: none;
+}
+
+/*Content Styles*/
+.content-wrap {
+    margin: 26px auto 26px auto;
+    width: 85%;
+}
+.content-wrap img {
+    margin-top: 24px;
+}
+.content-wrap article {
+    margin: 0px 24px;
+}
+.post_container {
+    border-bottom: 1px solid rgba(15, 15, 15, 0.1);
+}
+
+/*Footer Styles*/
+.site-footer {
+    margin-top: 25px;
+    background-color: #e1e1e1;
+}
+.nav-footer-wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+}
+.footer_widget {
+    padding: 0px 25px;
+    margin: 25px 0px;
+}
+.footer_widget_one {
+    border-left: 1px solid rgba(15, 15, 15, 0.1);
+}
+.footer_widget_two {
+    border-left: 1px solid rgba(15, 15, 15, 0.1);
+    border-right: 1px solid rgba(15, 15, 15, 0.1);
+}
+.footer_widget_three {
+    border-right: 1px solid rgba(15, 15, 15, 0.1);
+}
+.toon-widget img {
+    width: 100%;
+}
+.toon-widget .menu {
+    list-style: none;
+    padding: 0;
+}
+.toon-widget .menu li {
+    padding: 10px 0px;
+    border-bottom: 1px solid #0352e3;
+}
+.toon-widget .menu li a {
+    text-decoration: none;
+}
+.location {
+    width: 100%;
+    height: 225px;
+}
+.copyright {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 12px 0px;
+}
+
+/***Media Queries***/
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    .nav-main {
+        display: none;
+    }
+    .flex_item_content {
+        flex: 1;
+        min-width: 100%;
+    }
+    .flex_item_sidebar {
+        flex: 1;
+        min-width: 100%;
+    }
+    .flex_item_img_preview {
+        flex: 1;
+        min-width: 100%;
+    }
+    .flex_item_text_preview {
+        flex: 1;
+        min-width: 100%;
+    }
+    .flex_item_footer {
+        width: 100%;
+    }
+    .attachment-thumbnail {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: auto;
+    }
+    .content-wrap article {
+        text-align: center;
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .nav-main {
+        display: none;
+    }
+    .flex_item_content {
+        flex: 1;
+        min-width: 100%;
+    }
+    .flex_item_sidebar {
+        flex: 1;
+        min-width: 100%;
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    #nav-mobile-toggle {
+        display: none;
+    }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
+
+
+
+
+
+
+
+
